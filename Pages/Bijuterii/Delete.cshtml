@@ -1,0 +1,46 @@
+﻿@page
+@model Bradea_Simona_AplicatieWeb.Pages.Bijuterii.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Bijuterie</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Bijuterie.Denumire)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Bijuterie.Denumire)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Bijuterie.Bijutier)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Bijuterie.Bijutier)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Bijuterie.Pret)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Bijuterie.Pret)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Bijuterie.DataVanzarii)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Bijuterie.DataVanzarii)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="Bijuterie.ID" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-page="./Index">Back to List</a>
+    </form>
+</div>
